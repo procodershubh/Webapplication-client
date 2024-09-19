@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { backendurl } from "../../Servicepage";
+
 
 
 function Addnewseller() {
@@ -31,7 +33,7 @@ function Addnewseller() {
         if (insdata.name.length>=3) {
 
             const { name, email, phone, zipcode} = insdata;
-            const mydata = await fetch("http://localhost:5782/createseller", {
+            const mydata = await fetch(`${backendurl}/createseller`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

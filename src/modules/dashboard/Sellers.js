@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { backendurl } from '../../Servicepage';
 
 
 
@@ -14,7 +15,7 @@ function Sellers() {
   const [mydata, setdata] = useState([]);
 
   const myapi = () => {
-    axios.get("http://localhost:5782/allsellers").then((d) => {
+    axios.get(`${backendurl}/allsellers`).then((d) => {
       setdata(d.data);
     });
   };

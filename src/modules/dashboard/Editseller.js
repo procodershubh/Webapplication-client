@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { backendurl } from '../../Servicepage';
 
 
 function Editseller() {
@@ -28,7 +29,7 @@ function Editseller() {
         }
 
         const singleuser = () => {
-            axios.get(`http://localhost:5782/singledata/${id}`).then((d) => {
+            axios.get(`${backendurl}/singledata/${id}`).then((d) => {
               console.log(d.data);
               setdata(d.data);
             })
@@ -41,7 +42,7 @@ function Editseller() {
           const updaterecord = async () => {
             const { name, email, phone, zipcode } = insdata;
             try {
-                const mydata = await fetch(`http://localhost:5782/updaterecord/${id}`, {
+                const mydata = await fetch(`${backendurl}/updaterecord/${id}`, {
                     method: "PATCH",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({

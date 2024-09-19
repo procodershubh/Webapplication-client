@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { backendurl } from '../../Servicepage';
 function Newacc() {
   const appnavigate = useNavigate();
 
@@ -61,7 +61,7 @@ function Newacc() {
     const { fullname, email, mobile, pass } = insdata;
 
     try {
-      const mydata = await fetch("http://localhost:5782/createnew", {
+      const mydata = await fetch(`${backendurl}/createnew`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullname, email, mobile, pass })
