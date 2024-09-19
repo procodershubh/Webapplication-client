@@ -1,0 +1,81 @@
+.full-height {
+    min-height: 89vh; /* Full viewport height */
+    height: 100%;
+  }
+  .newacc{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/mainbg.png);    
+    background-size: 100% 100%;
+    min-height: 100vh;
+    max-height: max-content;
+  }
+  
+  .fsidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto; /* Add vertical scrolling if the content overflows */
+    z-index: 1000; /* Ensure the sidebar stays on top */
+    background-color: #242c44; 
+  }
+  
+  .container-full-height {
+    min-height: 100vh; /* Ensures the container is at least the height of the viewport */
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+.navbar{
+   background-color: #242c44;
+}
+a.d-flex.align-items-center.pb-3.mb-3.link-body-emphasis.text-decoration-none.border-bottom {
+    padding-left: 40px;
+    font-size: 20px;
+    color: aliceblue !important;
+}
+
+a.link-body-emphasis.d-inline-flex.text-decoration-none.rounded {
+    padding: 15px 40px;
+    gap: 15px;
+    color: white !important;
+    align-items: center;
+    font-size: 17px;
+    color: aliceblue;
+}
+
+
+
+.cardimgone{
+    background-color: #fa5a7d;
+    padding: 10px 0px ;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 37px;
+}
+.cardimgtwo{
+    background-color: #ff957a;
+    padding: 10px 0px ;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 37px;
+}
+
+.cardimgthree{
+   
+    background-color:  #41d95a;
+    padding: 10px 0px ;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 37px;
+}
+.cardimgfour{
+    background-color:  #c085ff;
+    padding: 10px 0px ;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 37px;
+}
+
