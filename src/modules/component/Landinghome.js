@@ -38,7 +38,7 @@ function Landinghome() {
         return total + (order.cartItems || []).reduce((sum, item) => sum + item.price, 0);
       }, 0);
 
-    setTotalDeliveredSales(deliveredSales);
+    setTotalDeliveredSales(deliveredSales.toFixed(2));
 
     });
 
